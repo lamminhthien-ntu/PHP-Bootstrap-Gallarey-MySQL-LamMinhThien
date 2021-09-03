@@ -19,7 +19,7 @@ if (isset($_POST['but_submit'])) {
 
         if ($count > 0) {
             $_SESSION['uname'] = $uname;
-             header('Location: dashboard.php');
+             header('Location: dashboard_template.php');
             echo $uname;
         } else {
             echo "Invalid username and password";
