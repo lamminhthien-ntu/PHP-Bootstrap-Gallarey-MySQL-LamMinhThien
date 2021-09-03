@@ -172,8 +172,21 @@ if (isset($_POST['but_logout'])) {
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div class="container">
-            Hello
+        <div class="">
+            <form action="dashboard_table_image.php" method="post">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+                </div>
+                <div class="form-group">
+                    <textarea name="description" id="" rows="2" class="form-control" 
+                    placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="filepath" id="" rows="2" class="form-control" 
+                    placeholder="File Path"></textarea>
+                </div>
+                <input type="submit" class="btn btn-success btn-block" name="save_image" value="Save Image">
+            </form>
         </div>
         <!-- End of Content Wrapper -->
 

@@ -197,8 +197,7 @@ if (isset($_POST['but_logout'])) {
                             <tr>
                                 <td><?php echo $row['id'] ?></td>              
                                 <td><?php echo $row['username'] ?></td>
-                                <td><?php echo $row['description'] ?></td>
-
+                                <td><?php echo $row['password'] ?></td>
                                 <td>
                                     <a href="edit.php?id=<?php echo $row['id'] ?>" <div class="btn btn-secondary"></div>
                                        <i class="far fa-marker"></i>

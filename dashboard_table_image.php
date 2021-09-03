@@ -14,6 +14,24 @@ if (isset($_POST['but_logout'])) {
 }
 ?>
 
+<?php
+if (isset($_POST['save_image']))
+{   
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $filepath = $_POST['filepath'];
+    // echo $title;
+    // echo $description;
+
+    $query = "INSERT INTO images(title,description,filepath) VALUES ('$title', '$description','$filepath')";
+    $result = mysqli_query($link, $query);
+    if (!$result) {
+        die("Querry Failed");
+    }
+
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
