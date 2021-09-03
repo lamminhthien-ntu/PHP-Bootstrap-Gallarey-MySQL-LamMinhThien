@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2021 at 03:47 AM
+-- Generation Time: Sep 03, 2021 at 06:05 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -47,6 +47,26 @@ INSERT INTO `images` (`id`, `title`, `description`, `filepath`, `uploaded_date`)
 (5, 'Road', 'Going down the only road I\'ve even known.', 'https://ichef.bbci.co.uk/news/640/cpsprodpb/C342/production/_88068994_thinkstockphotos-493881770.jpg', '2019-07-16 20:12:00'),
 (6, 'Stars', 'A wonderful view of the night sky.', 'https://i.pinimg.com/originals/96/b3/28/96b328bb242ace6f16465d64502b94ec.jpg', '2019-07-16 20:12:39');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(80) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `password` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `name`, `password`) VALUES
+(1, 'minhthienmap', 'Lâm Minh Thi?n', 'minhliem');
+
 --
 -- Indexes for dumped tables
 --
@@ -58,6 +78,12 @@ ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -66,6 +92,12 @@ ALTER TABLE `images`
 --
 ALTER TABLE `images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
